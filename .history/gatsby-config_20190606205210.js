@@ -4,7 +4,7 @@ const cssnext = require('postcss-cssnext')
 module.exports = {
   siteMetadata: {
     title: `Monica Arroyo Website`,
-    siteUrl: `https://monica_arroyo_website`,
+    siteUrl: ``,
     description: `This is potfolio I build using gatsby and react`,
     author: `monica.arroyo1319@gmail.com`,
   },
