@@ -9,7 +9,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    //`gatsby-plugin-eslint`,
+    `gatsby-plugin-esling`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -65,33 +65,19 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-souce-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`
       }
     },
-    //error tracking - from gatsby tutorial
+    //error tracking
     {
-        resolve: `gatsby-plugin-sentry`,
-        options: {
-          dsn: `${process.env.SENTRY_DSN}`,
-          // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
-          environment: process.env.NODE_ENV,
-          enabled: (() => ["production", "stage"].indexOf(process.env.NODE_ENV) !== -1)()
-        }
-      
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-sentry`,
       options: {
-        plugins: []
-      }
-    }, 
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: []
+        dsn:`` ,
+        enviorment: process.env.NODE_ENV,
+        enabled: (()=> ['production','stage'].indexOf(process.env.NODE_ENV) !==1)()
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

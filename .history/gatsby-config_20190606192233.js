@@ -9,7 +9,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    //`gatsby-plugin-eslint`,
+    `gatsby-plugin-esling`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -65,7 +65,7 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-souce-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`
@@ -73,21 +73,15 @@ module.exports = {
     },
     //error tracking - from gatsby tutorial
     {
-        resolve: `gatsby-plugin-sentry`,
+        resolve: "gatsby-plugin-sentry",
         options: {
-          dsn: `${process.env.SENTRY_DSN}`,
+          dsn: "DSN_URL",
           // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
           environment: process.env.NODE_ENV,
           enabled: (() => ["production", "stage"].indexOf(process.env.NODE_ENV) !== -1)()
         }
       
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: []
-      }
-    }, 
     {
       resolve: `gatsby-transformer-remark`,
       options: {

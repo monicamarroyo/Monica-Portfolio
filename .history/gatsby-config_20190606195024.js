@@ -9,7 +9,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    //`gatsby-plugin-eslint`,
+    `gatsby-plugin-eslint`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -65,7 +65,7 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-souce-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`
@@ -82,12 +82,6 @@ module.exports = {
         }
       
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: []
-      }
-    }, 
     {
       resolve: `gatsby-transformer-remark`,
       options: {
