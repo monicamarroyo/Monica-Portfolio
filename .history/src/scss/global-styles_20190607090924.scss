@@ -1,0 +1,24 @@
+@import './helpers.scss';
+
+html, body {
+    overflow: hidden;
+}
+
+//fonts
+.font-weight-medium {
+ font-weight: $font-weight-medium;   
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+//buttons 
+.btn {
+    text-transform: capitalize;
+    &-primary {
+        color: $white;
+    }
+}
+
+//links

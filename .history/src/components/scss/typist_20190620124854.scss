@@ -1,0 +1,109 @@
+//@import "compass/css3";
+//@import "compass";
+//@import "compass/css3";
+@import '../../scss/helpers.scss';
+.main_header_text {
+  display: inline-block;
+  position: relative;
+}
+
+/*
+h1 {
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 0 0 0.625rem #ff006c, 0 0 1.25rem #ff006c, 0 0 1.875rem #ff006c,
+    0 0 2.5rem #ff417d, 0 0 4.375rem #ff417d, 0 0 5rem #ff417d,
+    0 0 6.25rem #ff417d, 0 0 9.375rem #ff417d;
+}
+h3 {
+  font-weight: 200;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 0.125rem;
+}
+*/
+@function multiple-box-shadow($n) {
+  $value: "#{random(100)}px #{random(200)}px #FFF";
+  @for $i from 2 through $n {
+    $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
+  }
+
+  @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(7000); //700
+$shadows-medium: multiple-box-shadow(2000); //200
+$shadows-big: multiple-box-shadow(1000);//100
+
+//html {
+//  height: 100%;
+ // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  //overflow: hidden;
+//}
+
+.stars {
+  width: 1px;
+  height: 1px;
+  background:transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 200px;
+    width: 1px;
+    height: 1px;
+    backgroundt: transparent;
+    box-shadow: $shadows-small;
+  }
+}
+
+.stars2 {
+  width: 2px;
+  height: 2px;
+  background:transparent;
+  box-shadow: $shadows-medium;
+  animation: animStar 100s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 200px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+  }
+}
+
+.stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: animStar 150s linear infinite;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 200px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;
+  }
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+

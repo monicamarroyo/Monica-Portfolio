@@ -1,0 +1,23 @@
+@import '../../scss/helpers.scss';
+.contact-item  {
+    margin-left: 5.5rem;
+    margin-bottom: 1rem;
+    width: 5.75rem;
+    height: 5.75rem;
+    background: pink;
+    border-radius: 50%;
+    transition: all .5s;
+    @include media-breakpoint-up(xs) {
+        margin-left: 2rem;
+      }
+
+      @include media-breakpoint-up(sm) {
+        margin-left: 3rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-left: 5rem;
+      }
+}
+
+

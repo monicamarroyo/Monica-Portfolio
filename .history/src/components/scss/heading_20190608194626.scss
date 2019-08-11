@@ -1,0 +1,7 @@
+@import '../../scss/helpers.scss';
+
+.Heading {
+    &--extra-bold {
+        font-weight: $font-weight-black;
+    }
+}

@@ -1,0 +1,21 @@
+@import '../../scss/helpers.scss';
+
+.MainHeader {
+  text-align: center;
+
+  &__avatar {
+    $colour: $primary;
+
+    background-color: $white;
+    max-width: 160px;
+    max-height: 160px;
+    box-shadow:
+      0 0 1px 11px rgba($colour, .15),
+      0 0 1px 22px rgba($colour, .1);
+    border: 4px solid rgba($colour, 1);
+  }
+
+  &__cta-container {
+    text-shadow: none;
+  }
+}

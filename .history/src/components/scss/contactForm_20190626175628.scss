@@ -1,0 +1,49 @@
+@import '../../scss/helpers.scss';
+.contact-item  {
+    margin: auto;
+    margin-bottom: 1rem;
+    width: 5.25rem;//6rem;
+    height: 5.25rem;//6rem;
+    background:	#E8E8E8;
+    border-radius: 50%;
+    transition: all .5s;
+    &:hover {
+        background: white;
+    }
+}
+
+.contact_name {
+    margin: auto;
+}
+.contact_textarea {
+    margin: auto;
+}
+.contact_email {
+    margin: auto;
+}
+Input {
+    width: 80%;
+    border-radius: 5px;
+}
+.contact_name {
+    margin-left: 20%;
+    @include media-breakpoint-down(sm) {
+        margin: auto;
+    }
+}
+.contact_email{
+    margin-right: 20%;
+    @include media-breakpoint-down(sm) {
+        margin: auto;
+    }
+}
+.contact_textarea {
+    width: 80%;
+    height: 40vh;
+    border-width: 2px;
+    border-radius: 5px;
+}
+.contact_btn {
+    font-size: 1.15rem;
+    padding: .5rem 1rem;
+}

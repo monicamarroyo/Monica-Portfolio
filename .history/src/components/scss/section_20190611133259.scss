@@ -1,0 +1,115 @@
+@import '../../scss/helpers.scss';
+
+$rounded-edge-height: 50px;
+
+@mixin rounded-top-padding($padding) {
+  &.Section--rounded-top {
+    padding: calc(#{$padding} - #{$rounded-edge-height}) 0 !important;
+
+    @include media-breakpoint-down(xs) {
+      padding: $padding 0;
+    }
+  }
+}
+
+.Section {
+  height: 100vh;
+  &--gray {
+    background-color: $gray-100;
+    color: $gray-700;
+  }
+
+  &--padding-large {
+    $padding: 12rem;
+
+    padding: $padding 0;
+
+    @include rounded-top-padding($padding);
+
+    @include media-breakpoint-down(sm) {
+      padding: ($padding * .75) 0;
+    }
+  }
+
+  &--padding-small {
+    $padding: 6rem;
+
+    padding: $padding 0;
+
+    @include rounded-top-padding($padding);
+  }
+
+  &--rounded-bottom {
+    position: relative;
+
+    &:after {
+      content: '';
+      padding-bottom: 3%;
+      //background-image: url('../../images/round-edge.svg');
+      margin-bottom: -.625rem !important;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      position: absolute;
+      bottom: 0;
+      z-index: 0;
+
+      @include media-breakpoint-up(xs) {
+        display: none;
+      }
+
+      @include media-breakpoint-up(sm) {
+        display: block;
+        width: 170%;
+        margin-left: -35%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: 110%;
+        margin-left: -5%;
+      }
+    }
+  }
+
+  &--bg-Image {
+    background-color: #1c013b;
+    background-position: center;
+    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),url('../../images/background.jpg')  ;
+    background-size: cover;
+    color: $light;
+    text-shadow: 0px 1px 3px rgba($black, 1);
+    font-weight: $font-weight-medium;
+
+    @include headings-colour($white);
+  }
+}
+
+//About Me.
+//I am Monica Arroyo, and I am self-taught full-stack developer. I have a passion for building great software focusing on writing robust, clean and maintainable code. What I hope to do as a developer is to contriubte to applications that empower and improve people's lives.
+
+
+//My Journey as  developer 
+//I descovered programming through my courses in college. 
+//I have a bachelor's degree in Electical engineering from Texas State University.  
+
+//mask
+//More about me 
+//Although I have many intrestes besides coding, I tend to spend most of my free time learning, listening to music, and working out with Camp Gladiator. 
+
+//I have a bachelor's degree in Electrical Enginering with a Concentration in Computer Engineering from Texas State University. After college I decided  
+//I have a passion for all aspects of building great software focusing on writing robust, clean and maintainable code. 
+
+
+// How
+//Hi, there -- I'm Monica
+// 
+// My journey as a developer 
+// What I hope to do 
+ /*
+  
+
+ */
+ /* What I am doing
+ I am currently learning about web developement by building my own applications.
+
+ */

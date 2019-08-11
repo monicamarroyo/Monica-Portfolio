@@ -1,0 +1,11 @@
+@import '../../scss/helpers.scss';
+
+.Button {
+    .Icon {
+      margin-right: $icon-spacing;
+    }
+  }
+  .contact-btn {
+
+    white-space: nowrap
+  }
