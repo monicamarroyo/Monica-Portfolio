@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { navigate } from "gatsby"
-
+import '../components/scss/contact.scss'
 class ContactForm extends Component {
   constructor(props) {
     super(props)
