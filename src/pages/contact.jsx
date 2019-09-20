@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { Row, Col } from "reactstrap"
 import BackgroundImage from "gatsby-background-image"
 import Fade from "react-reveal/Fade"
+import ContactForm from "../components/contactForm.jsx"
 import "../components/scss/contact.scss"
 
 const Contact = ({ data }) => (
@@ -42,59 +43,7 @@ const Contact = ({ data }) => (
     >
       <div className="Contact-Form">
         <Fade right>
-          <form
-            id="email-form"
-            name="email-form"
-            method="POST"
-            data-netlify="true"
-          >
-            <label htmlFor="name" className="contact-form-label">
-              Name:
-            </label>
-            <input
-              type="text"
-              className="input contact-input w-input"
-              max="256"
-              name="Name"
-              data-name="Name"
-              placeholder="Your name"
-              id="Name"
-              required=""
-            />
-            <label htmlFor="Email" className="contact-form-label">
-              Email:
-            </label>
-            <input
-              type="email"
-              className="input contact-input w-input"
-              max="256"
-              name="email"
-              data-name="Email"
-              placeholder="Email address"
-              id="Email"
-              required=""
-            />
-            <label htmlFor="Message" className="contact-form-label">
-              Message:
-            </label>
-            <textarea
-              id="Message"
-              name="Message"
-              max="5000"
-              data-name="Message"
-              required=""
-              placeholder="Tell me about your project"
-              className="input contact-input text-field w-input"
-            />
-            <button
-              type="submit"
-              //value="Send Message"
-              data-wait="Please wait..."
-              className="form-button"
-            >
-              Send Message
-            </button>
-          </form>
+         <ContactForm/>
         </Fade>
       </div>
       <div className="Contact_Form--backtext">Contact</div>
@@ -119,3 +68,63 @@ const ContactSection = props => (
 )
 
 export default ContactSection
+/*
+ <form
+            id="email-form"
+            method="post"
+            action="/success"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="bot-field" />
+            <label htmlFor="name" className="contact-form-label">
+              Name:
+            </label>
+            <input
+              type="text"
+              className="input contact-input w-input"
+              max="256"
+              name="name"
+              data-name="name"
+              placeholder="Your name"
+              id="name"
+              required=""
+            />
+            <label htmlFor="email" className="contact-form-label">
+              Email:
+            </label>
+            <input
+              type="email"
+              className="input contact-input w-input"
+              max="256"
+              name="email"
+              data-name="email"
+              placeholder="Email address"
+              id="email"
+              required=""
+            />
+            <label htmlFor="message" className="contact-form-label">
+              Message:
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              max="5000"
+              data-name="message"
+              required=""
+              placeholder="Send me a message."
+              className="input contact-input text-field w-input"
+            />
+            <input
+              type="submit"
+              value="Send Message"
+              //data-wait="Please wait..."
+              className="form-button"
+            >
+              Send Message
+            </input>
+            <input type="reset" value="Eraser" />
+           
+          </form>
+
+*/
