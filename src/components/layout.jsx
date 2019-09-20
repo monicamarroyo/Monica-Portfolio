@@ -1,7 +1,7 @@
 import React from "react"
+import get from 'lodash/get';
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import get from "lodash/get"
 import Helmet from "react-helmet"
 
 import App from "./app"
@@ -18,7 +18,7 @@ const siteTitle = "Monica Arroyo"
 const getSiteDescription = data => get(data, "site.siteMetadata.description")
 const getSiteUrl = data => get(data, "site.siteMetadata.siteUrl")
 
-export const Layout = ({ data, render, ...otherProps }) => (
+export const Layout = ({ data, render, children, ...otherProps }) => (
   <ErrorBoundary>
     <App
       render={({ isSidebarOpen, scrollTop, toggleSidebar }) => (
@@ -43,6 +43,9 @@ export const Layout = ({ data, render, ...otherProps }) => (
     />
   </ErrorBoundary>
 )
+/*
+ 
+*/
 
 Layout.propTypes = {
   data: PropTypes.shape({

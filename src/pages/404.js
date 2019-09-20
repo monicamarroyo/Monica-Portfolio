@@ -1,14 +1,30 @@
+import { Link } from "gatsby"
 import React from "react"
+import { Container } from "reactstrap"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { default as Layout } from "../components/layout"
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
+
+export const NotFoundPage = () => (
+  <section className="pt-5 text-center">
+    <Container>
+      <h1 className="text-primary">404</h1> NOT FOUND
+      <p>
+        This page doesn&apos;t exist. <Link to="/">Go to the home page</Link>
+      </p>
+      <iframe
+        title="404 gif"
+        src="https://giphy.com/embed/l1J9EdzfOSgfyueLm"
+        width="100%"
+        height="480"
+        frameBorder="0"
+        className="giphy-embed mt-5"
+        allowFullScreen
+      />
+    </Container>
+  </section>
 )
 
-export default NotFoundPage
+const NotFoundPageContainer = () => <Layout render={() => <NotFoundPage />} />
+
+export default NotFoundPageContainer
