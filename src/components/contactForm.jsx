@@ -58,7 +58,7 @@ class ContactForm extends Component {
             <input name="bot-field" onChange={this.handleChange} />
           </label>
         </p>
-        <label htmlFor="name" className="contact-form-label">
+        <label className="contact-form-label">
           Name:
         </label>
         <input
@@ -68,10 +68,10 @@ class ContactForm extends Component {
           name="name"
           onChange={this.handleChange}
           placeholder="Your name"
-          id="name"
+          //id="name"
           required=""
         />
-        <label htmlFor="email" className="contact-form-label">
+        <label className="contact-form-label">
           Email:
         </label>
         <input
@@ -80,19 +80,19 @@ class ContactForm extends Component {
           max="256"
           name="email"
           onChange={this.handleChange}
-          data-name="email"
+         // data-name="email"
           placeholder="Email address"
-          id="email"
+          //id="email"
           required=""
         />
-        <label htmlFor="message" className="contact-form-label">
+        <label className="contact-form-label">
           Message:
         </label>
         <textarea
-          id="message"
+         // id="message"
           name="message"
           max="5000"
-          data-name="message"
+         // data-name="message"
           onChange={this.handleChange}
           required=""
           placeholder="Send me a message."
@@ -100,7 +100,7 @@ class ContactForm extends Component {
         />
         <button
           type="submit"
-          value="Send Message"
+         // value="Send Message"
           //data-wait="Please wait..."
           className="form-button"
         >
