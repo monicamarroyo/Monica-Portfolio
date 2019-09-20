@@ -86,11 +86,12 @@ $transition: all 300s ease-in-out;
   max-width: 50vw;
   @media (max-width: 767.98px) {
     max-width: 100vh;
-    padding-left: 0;
+    padding-left: 0 !important;
     padding-top: 1rem;
     padding-right: auto;
     padding-bottom: auto;
     margin: auto;
+   
   }
 }
 .Contact_Section--form {
