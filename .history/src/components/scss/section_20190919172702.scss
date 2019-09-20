@@ -1,0 +1,44 @@
+@import "../../scss/helpers.scss";
+
+.Section {
+  &--gray {
+    background-color: black;
+    color: $gray-700;
+  }
+  &--white {
+    background-color: white;
+  }
+  &--padding-large {
+    $padding: 11rem;
+    padding: $padding 0;
+
+    @include media-breakpoint-down(md) {
+      padding: ($padding * 0.85) 0;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: ($padding * 0.75) 0;
+    }
+  }
+
+  &--padding-small {
+    $padding: 6rem;
+    padding: $padding 0;
+  }
+
+  &--bg {
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    );
+
+    color: $light;
+    text-shadow: 0px 1px 3px rgba($black, 1);
+    font-weight: $font-weight-medium;
+
+    @include headings-colour($white);
+  }
+}
+

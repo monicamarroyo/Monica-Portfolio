@@ -1,0 +1,167 @@
+@import '../../scss/helpers.scss';
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+.Navbar {
+  $transition: all .8s ease-in-out;
+
+  background-color: transparent;
+  border-bottom: 1px solid $border-color;
+  border-bottom-width: 2px;
+  border-image: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.1) 50%, rgba(255,255,255,0) 100%) 5%;
+  transition: $transition;
+
+  .navbar-toggler {
+    border: 1px solid $gray-500;
+    color: $white;
+    padding: .4rem .7rem;
+    font-size: 1.6rem;
+    transition: $transition;
+  }
+
+  .nav-link {
+    color: $white;
+    font-weight: $font-weight-medium;
+
+    &:hover {
+      color: $gray-500;
+    }
+  }
+  // when scroll
+  &--solid {
+    background-color: white;//blue;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+    border-bottom: 0;
+    border-image: none;
+    .nav-link {
+      color: #323232;
+    }
+    .nav-item.active .nav-link {
+      color: $primary;
+    }
+  }
+
+  .navbar-brand {
+    font-size: 2.5rem;
+    padding: none;
+    margin: none;
+    //font-family: 'Courgette', cursive;
+   // img {
+     // max-height: 50px;
+   // }
+  }
+
+  .navbar-nav {
+   // width: 100%;
+  }
+
+  .nav-item {
+    //width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0;
+  }
+
+  .nav-item,
+  .btn {
+    font-size: $font-size-lg;
+  }
+   
+}
+.btn-secondary {
+  background-color: #323232;
+}
+.bar1, .bar2, .bar3 {
+  width: 2.25rem;
+  height: .35rem;
+  background-color: #333;
+  margin: .25rem 0;
+  transition: 0.4s;
+}
+
+
+/*
+.underbar{
+  width: 0;
+  height: 5px;
+  background: rgba(100,100,200,0);
+  //left: -50px;
+  top: 20px;
+  position: absolute;
+  -webkit-transition: 0.5s ease;
+}
+.Navbar {
+    $transition: all .2s ease-in-out;
+  
+    background-color: transparent;
+    border-bottom: 1px solid $border-color;
+    border-bottom-width: 1px;
+    border-image: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.1) 50%, rgba(255,255,255,0) 100%) 5%;
+    transition: $transition;
+  
+    .navbar-toggler {
+      border: 1px solid $gray-500;
+      color: $white;
+      padding: .4rem .7rem;
+      font-size: 1.6rem;
+      transition: $transition;
+    }
+    
+    .nav-link {
+      color: $white;
+      font-weight: $font-weight-medium;
+      
+      transition: 0.5s ease;
+      -webkit-transition: 0.5s ease;
+      &:hover {
+        //color: $gray-500;
+        //text-decoration: underline;
+        text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 10px rgba(255,255,255,0.8),0 -4px 15px rgba(229,78,208,0.8);
+        text-decoration: 0px -2px 0px rgba(0,0,0,1), 0 0 10px rgba(229,78,208,1),0 -4px 15px rgba(255,255,255,0.5);
+
+        text-decoration: underline;
+        }
+        .nav-item.active .nav-link {
+          color: $primary;
+        }   
+        
+    }
+
+  
+    &--solid {
+      background-color: $dark;
+      box-shadow: 0 1px 5px 0 rgba(0,0,0,.3);
+      border-bottom: 0;
+      border-image: none;
+  
+      .nav-item.active .nav-link {
+        color: $primary;
+      }
+      
+    }
+  
+    .navbar-brand {
+      color: #fff;
+      font-size: 2rem;
+      img {
+        max-height: 50px;
+      }
+    }
+  
+    .navbar-nav {
+      width: 100%;
+    }
+  
+    .nav-item {
+      width: 100%;
+      text-align: center;
+      text-transform: capitalize;
+      padding: 0;
+    }
+  
+    .nav-item,
+    .btn {
+      font-size: $font-size-lg;
+    }
+  }
+
+  
+*/

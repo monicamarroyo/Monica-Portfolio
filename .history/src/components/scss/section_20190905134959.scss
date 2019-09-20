@@ -1,0 +1,99 @@
+@import '../../scss/helpers.scss';
+
+$rounded-edge-height: 50px;
+
+@mixin rounded-top-padding($padding) {
+  &.Section--rounded-top {
+    padding: calc(#{$padding} - #{$rounded-edge-height}) 0 !important;
+
+    @include media-breakpoint-down(xs) {
+      padding: $padding 0;
+    }
+  }
+}
+
+.Section {
+
+  &--gray {
+    background-color: black;
+    color: $gray-700;
+  }
+  &--white {
+    background-color: white;
+  }
+  &--padding-large {
+    $padding: 12rem;
+
+    padding: $padding 0;
+
+    @include rounded-top-padding($padding);
+    @include media-breakpoint-down(md) {
+      padding:($padding * .75); 
+    }
+    @include media-breakpoint-down(sm) {
+      padding: ($padding * .75);
+    }
+  }
+
+  &--padding-small {
+    $padding: 6rem;
+
+    padding: $padding 0;
+    @include rounded-top-padding($padding);
+  }
+
+  &--bg {
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .15), rgba(0, 0, 0, .15));
+    
+    color: $light;
+    text-shadow: 0px 1px 3px rgba($black, 1);
+    font-weight: $font-weight-medium;
+
+    @include headings-colour($white);
+  }
+}
+
+// //background-color: #00a6d9;// #F8D0D2;// #DEC3C3; // #E4C3D1;
+//linear-gradient(180deg, rgba(0, 0, 0, .15), rgba(0, 0, 0, .15)), url("https://uploads-ssl.webflow.com/593008e46c534e61e392e0f2/59326a0171d8a74f7e5d59c0_ashim-d-silva-162286.jpg")
+/*
+linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),url('../../images/austin-img.jpg')  ;
+*/ //@at-root
+
+/*
+&--rounded-bottom {
+    position: relative;
+
+    &:after {
+      content: '';
+      padding-bottom: 3%;
+      //background-image: url('../../images/round-edge.svg');
+      margin-bottom: -.625rem !important;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      position: absolute;
+      bottom: 0;
+      z-index: 0;
+
+      @include media-breakpoint-up(xs) {
+        display: none;
+      }
+
+      @include media-breakpoint-up(sm) {
+        display: block;
+        width: 170%;
+        margin-left: -35%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: 110%;
+        margin-left: -5%;
+      }
+    }
+  }
+
+*/
+  //height: 100vh;
+

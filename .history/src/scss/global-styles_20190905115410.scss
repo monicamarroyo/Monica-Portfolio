@@ -1,0 +1,60 @@
+@import './helpers.scss';
+
+html, body {
+    overflow-x: hidden;
+    font-size: .5rem;
+   // overflow: hidden;
+  //  overflow-y: scroll;
+}
+@include media-breakpoint-up(sm) {
+    html {
+      font-size: .75rem;
+    }
+  }
+  
+  @include media-breakpoint-up(md) {
+    html {
+      font-size: 1em;
+    }
+  }
+  
+  @include media-breakpoint-up(lg) {
+    html {
+      font-size: 1.2rem;
+    }
+  }
+
+//fonts
+.font-weight-medium {
+ font-weight: $font-weight-medium;   
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+//buttons 
+.btn {
+    text-transform: capitalize;
+    &-primary {
+        color: $white;
+    }
+    border-radius: 3.25rem;
+}
+
+//links
+
+a {
+    color: #F44A66;
+    font-weight: $font-weight-bold;
+    transition: .15s ease-out;
+}
+//lists
+ul:not(.list-inline) {
+    padding-left: 2rem;
+  
+    li {
+      padding-left: .5rem;
+    }
+  }
+  

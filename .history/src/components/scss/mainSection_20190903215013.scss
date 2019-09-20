@@ -1,0 +1,79 @@
+@import '../../scss/helpers.scss';
+.background-image {
+  background-size: cover;
+}
+.header-btn {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 2.5rem;
+  padding-bottom: 1.25rem;
+}
+.header-btn_icon {
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: $white;
+  
+ 
+}
+.header-text_name {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 900;
+  letter-spacing: .5rem;
+//  font-size: 1.25rem;
+}
+
+.header-text_desc {
+  //position: relative;
+  //display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 900;
+  letter-spacing: .5rem;
+  //font-size: 3rem;
+}
+
+.header-text_desc:after, .header-text_desc:before{
+content: "";
+ position: absolute;
+ z-index: 1000;
+ width: 25%;
+ background-color: $white;
+ //display: block;
+ height: 3px;
+}
+.header-text_desc:after {
+ 
+  bottom: -1.75rem;
+  left: 26rem;
+}
+
+.header-text_desc:before {
+  right: 27rem;
+  bottom: -1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

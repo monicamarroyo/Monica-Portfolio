@@ -1,0 +1,280 @@
+$transition: all 300s ease-in-out;
+.bgFlower {
+  transition: $transition;
+}
+.Projects {
+  padding: 0rem 5rem;
+}
+.Project_Desc {
+  padding: 2rem 2rem;
+}
+.Project_Link {
+}
+.Project_Dec--codeLink {
+  text-align: left;
+}
+
+//figure-stuff
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+ figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure figcaption::before,
+figure figcaption::after {
+	pointer-events: none;
+}
+
+ figure figcaption,
+ figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+ figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+figure.effect-winston {
+	background: #162633;
+	text-align: left;
+}
+
+figure.effect-winston img {
+	-webkit-transition: opacity 0.45s;
+	transition: opacity 0.45s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-winston figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	//background: url(../img/triangle.svg) no-repeat center center;
+	background-size: 100% 100%;
+	content: '';
+	-webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+	transition: opacity 0.45s, transform 0.45s;
+	-webkit-transform: rotate3d(0,0,1,45deg);
+	transform: rotate3d(0,0,1,45deg);
+	-webkit-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}
+
+figure.effect-winston h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+
+figure.effect-winston p {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 0 1.5em 7% 0;
+}
+
+figure.effect-winston a {
+	margin: 0 10px;
+	color: #5d504f;
+	font-size: 170%;
+}
+
+figure.effect-winston a:hover,
+figure.effect-winston a:focus {
+	color: #cc6055;
+}
+
+figure.effect-winston p a i {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,50px,0);
+	transform: translate3d(0,50px,0);
+}
+
+figure.effect-winston:hover img {
+	opacity: 0.6;
+}
+
+figure.effect-winston:hover h2 {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-winston:hover figcaption::before {
+	opacity: 0.7;
+	-webkit-transform: rotate3d(0,0,1,20deg);
+	transform: rotate3d(0,0,1,20deg);
+}
+
+figure.effect-winston:hover p i {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-winston:hover p a:nth-child(3) i {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-winston:hover p a:nth-child(2) i {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-winston:hover p a:first-child i {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+.ProjectContainer--1 {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  //display: inline-block;
+  // position: relative;
+}
+
+.ProjectContainer--1::before {
+  position: absolute;
+  top: 16%;
+  left: 16%;
+  width: 68%;
+  height: 28%;
+  border: 15px solid #b49298;//#193C46;
+  content: "";
+}
+.Project_Section {
+  min-height: 95vh;
+  flex: 1;
+  background-color: #b49298;
+}
+.Project_Section--left {
+  width: 45vw;
+  @media (max-width: 767.98px) {
+    width: 100vw;
+    min-height: 45vh;
+  }
+}
+.Project_Info {
+  position: relative;
+  left: 6.5rem;
+  top: 5rem;
+  @media (min-width: 1500px) {
+    top: 10rem;
+  }
+  @media (max-width: 767.98px) {
+    left: 0;
+    text-align: center;
+  }
+}
+
+.Project_Info--header {
+  font-family: "Raleway", sans-serif;
+  color: #193c46; //#F7E8E1; //#fff;
+  text-align: right;
+  line-height: 5rem;
+  font-weight: 800;
+  letter-spacing: 1.25rem;
+  text-transform: uppercase;
+  text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1),
+    10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 992px) {
+    font-size: 5vw;
+  }
+  @media (max-width: 767.98px) {
+    letter-spacing: 1rem;
+    font-size: 10vw;
+    text-align: center;
+  }
+}
+.Project_Info--underline {
+  width: 12.5rem;
+  height: 10px;
+  margin-top: 0.5rem; //1.875rem;
+  margin-right: 1.313rem;
+  background-color: #e2c5b6; //#fff;
+  float: right;
+  @media (max-width: 767.98px) {
+    float: none;
+    margin: auto;
+  }
+  @media (max-width: 575.98px) {
+    margin-top: 0;
+  }
+}
+
+.Project_Section--right {
+  flex: 1;
+  padding: 6rem 2rem 2rem 6rem;
+  @media (min-width: 1500px) {
+    padding: 12rem 2rem 2rem 12rem;
+  }
+  @media (max-width: 575.98px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.Project_Form--backtext {
+  position: absolute;
+  left: 15rem;
+  bottom: 15rem;
+  //top: 25rem;
+  color: hsla(0, 0%, 100%, 0.09);
+  font-size: 200px;
+  line-height: 160px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: $transition;
+  @media (min-width: 1500px) {
+    opacity: 0;
+  }
+  @media (max-width: 767.98px) {
+    opacity: 0;
+  }
+}

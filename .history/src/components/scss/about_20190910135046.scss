@@ -1,0 +1,10 @@
+.about_left {
+    width: 45%;
+   
+}
+@include media-breakpoint-down(sm) {
+   .about_left {
+    height: 40%;
+   } 
+   
+}

@@ -1,0 +1,142 @@
+//Come back to this
+@font-face {
+    font-family: 'icomoon';
+    src: url('../icons/icomoon.eot');
+    src: url('../icons/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../icons/icomoon.woff') format('woff'),
+    url('../icons/icomoon.ttf') format('truetype'),
+    url('../icons/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    //prevents issues with browser extensions that change fonts
+    font-family: 'icomoon', sans-serif !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    //better for font rendering
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-spotify:before {
+  content: "\ea94";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-bootstrap:before {
+  content: "\e90d";
+  color: #563d7c;
+}
+.icon-csswizardry:before {
+  content: "\e900";
+  color: #f43059;
+}
+.icon-docker:before {
+  content: "\e90e";
+  color: #1488c6;
+}
+.icon-gatsby:before {
+  content: "\e901";
+  color: #639;
+}
+.icon-github:before {
+  content: "\e902";
+}
+.icon-graphql:before {
+  content: "\e903";
+  color: #e10098;
+}
+.icon-javascript:before {
+  content: "\e90f";
+  color: #f7df1e;
+}
+.icon-jest:before {
+  content: "\e910";
+  color: #c21325;
+}
+.icon-json:before {
+  content: "\e911";
+}
+.icon-linkedin:before {
+  content: "\e904";
+  //color: #0077b5;
+}
+.icon-linux:before {
+  content: "\e905";
+  color: #fcc624;
+}
+.icon-materialdesign:before {
+  content: "\e912";
+  color: #757575;
+}
+.icon-node-dot-js:before {
+  content: "\e913";
+  color: #393;
+}
+.icon-postgresql:before {
+  content: "\e906";
+  color: #336791;
+}
+.icon-react:before {
+  content: "\e907";
+  color: #61dafb;
+}
+.icon-sass:before {
+  content: "\e908";
+  color: #c69;
+}
+.icon-cloud-lightning:before {
+  content: "\e909";
+}
+.icon-th-menu:before {
+  content: "\e90a";
+}
+.icon-book:before {
+  content: "\f02d";
+}
+.icon-chevron-down:before {
+  content: "\f078";
+}
+.icon-cogs:before {
+  content: "\f085";
+}
+.icon-bars:before {
+  content: "\f0c9";
+}
+.icon-envelope:before {
+  content: "\f0e0";
+}
+.icon-spinner:before {
+  content: "\f110";
+}
+.icon-code:before {
+  content: "\f121";
+}
+.icon-code-fork:before {
+  content: "\f126";
+}
+.icon-graduation-cap:before {
+  content: "\f19d";
+}
+.icon-joomla:before {
+  content: "\f1aa";
+}
+.icon-heartbeat:before {
+  content: "\f21e";
+}
+.icon-user-circle-o:before {
+  content: "\f2be";
+}
+.icon-drivers-license-o:before {
+  content: "\f2c3";
+}
+.icon-paperplane:before {
+  content: "\e90b";
+}

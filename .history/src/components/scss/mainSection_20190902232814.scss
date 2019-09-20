@@ -1,0 +1,56 @@
+@import '../../scss/helpers.scss';
+
+.header-text_name {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 900;
+  letter-spacing: .5rem;
+}
+.header-text_desc {
+ // position: relative;
+ // display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  color: $white;
+  font-weight: 900;
+  letter-spacing: .5rem;
+}
+
+.header-text_desc:after, .header-text_desc:before{
+content: "";
+ position: absolute;
+ z-index: 1000;
+ width: 100%;
+ background-color: $white;
+ //display: block;
+ height: 3px;
+}
+.header-text_desc:after {
+  bottom: -1.75rem;
+ left: 2rem;
+}
+
+.header-text_desc:before {
+  bottom: -1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
