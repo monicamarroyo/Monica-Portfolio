@@ -42,7 +42,7 @@ const Contact = ({ data }) => (
     >
       <div className="Contact-Form">
         <Fade right>
-          <form id="email-form" name="email-form" data-name="Email Form">
+          <form id="email-form" name="email-form" method="POST" data-netlify="true" data-name="Email Form">
             <label htmlFor="name" className="contact-form-label">
               Name:
             </label>
