@@ -42,7 +42,16 @@ const Contact = ({ data }) => (
     >
       <div className="Contact-Form">
         <Fade right>
-          <form id="email-form" name="email-form" method="POST" data-netlify="true" data-name="Email Form">
+          <form
+            id="email-form"
+            name="email-form"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            data-name="Email Form"
+          >
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
             <label htmlFor="name" className="contact-form-label">
               Name:
             </label>
@@ -81,12 +90,12 @@ const Contact = ({ data }) => (
               placeholder="Tell me about your project"
               className="input contact-input text-field w-input"
             />
-            <input
+            <button
               type="submit"
-              value="Send Message"
+              //value="Send Message"
               data-wait="Please wait..."
               className="form-button"
-            />
+            >Send Message</button>
           </form>
         </Fade>
       </div>
