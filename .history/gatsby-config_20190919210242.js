@@ -1,6 +1,6 @@
 //postcss transforms extends syntaxes and features into modern, broweser-friendly css
 //for bootsrap
-const cssnext = require("postcss-cssnext")
+const cssnext = require('postcss-cssnext')
 module.exports = {
   siteMetadata: {
     title: `Monica Arroyo Website`,
@@ -34,7 +34,9 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sentry`,
-      options: {},
+      options : {
+        
+      }
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
@@ -44,53 +46,49 @@ module.exports = {
 
     {
       resolve: `gatsby-plugin-resolve-src`,
-      options: {
-        addSassLoader: false,
-      },
+      options : {
+        addSassLoader: false
+      }
     },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        postCssPlugins: [
-          cssnext({
-            features: {
-              autoprefixer: false,
-            },
-          }),
-        ],
+        postCssPlugins: [cssnext()],
         precision: 8,
-        includePaths: ["src/scss"],
-      },
+        includePaths: ['src/scss'],
+        autoprefixer: false
+      }
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
+      resolve: `gatsby-source-filesystem`, 
+      options : {
         name: `content`,
-        path: `${__dirname}/src/content`,
-      },
+        path: `${__dirname}/src/content`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     //error tracking - from gatsby tutorial
     {
-      resolve: `gatsby-plugin-sentry`,
-      options: {
-        dsn: `https://6ca33f31794b46528038032e9918edb7@sentry.io/1476832`,
-        // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
-        environment: process.env.NODE_ENV,
-        enabled: (() =>
-          ["production", "stage"].indexOf(process.env.NODE_ENV) !== -1)(),
-      },
+        resolve: `gatsby-plugin-sentry`,
+        options: {
+          dsn: `https://6ca33f31794b46528038032e9918edb7@sentry.io/1476832`,
+          // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
+          environment: process.env.NODE_ENV,
+          enabled: (() => ["production", "stage"].indexOf(process.env.NODE_ENV) !== -1)()
+        }
+      
     },
     {
       resolve: `gatsby-transformer-remark`,
-    },
-
+    
+    }, 
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
