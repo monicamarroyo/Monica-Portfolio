@@ -43,7 +43,7 @@ const Sidebar = ({ isOpen, toggle }) => (
     <div className="Sidebar-item">
       <a
         className="Sidebar__link"
-        href="https://drive.google.com/file/d/1nbZps9HBHTAuDymwGDa5-lcCqPYURswW/view"
+        href="https://drive.google.com/file/d/1jxiwSY3GNfltlbAM4JsOupLpV61HafZk/view?usp=sharing"
         target="_blank"
       >
         Resume
