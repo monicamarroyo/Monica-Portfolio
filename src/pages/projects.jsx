@@ -177,7 +177,7 @@ const ProjectSection = props => (
         project2: markdownRemark(frontmatter: { type: { eq: "project-2" } }) {
           html
         }
-        project3: markdownRemark(frontmatter: { type: { eq: "project-2" } }) {
+        project3: markdownRemark(frontmatter: { type: { eq: "project-3" } }) {
           html
         }
         bgFlower: file(relativePath: { eq: "redflowers2.jpg" }) {
